@@ -5,14 +5,14 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Home | Template React</title>
+        <title>Home | Cork</title>
       </Head>
       <main className={styles.contentContainer}>
         <section className={styles.hero}>
           <span>👏🏼 Hey, welcome to</span>
-          <h1>About <span>Cork</span>.</h1>
+          <h1>About <span>Cork</span></h1>
           <p>
-            <span>for brazilians 🇧🇷</span>
+            <span>...for brazilians 🇧🇷</span>
           </p>
         </section>
 
