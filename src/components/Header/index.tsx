@@ -1,3 +1,4 @@
+import { ActiveLink } from '../ActiveLink';
 import styles from './styles.module.scss';
 
 export function Header() {
@@ -6,13 +7,34 @@ export function Header() {
       <div className={styles.headerContent}>
         <img src="/images/four-leaf.png" alt="Four Leaf" />
         <nav>
-          <a className={styles.active}>Home</a>
-          <a>Histórias</a>
-          <a>Perrengues</a>
-          <a>Dicas</a>
-          <a>Dúvidas Frequentes</a>
-          <a>Galeria</a>
-          <a>Contato</a>
+          <ActiveLink activeClassName={styles.active} href="/">
+            <a className={styles.active}>Home</a>
+          </ActiveLink>
+
+          <ActiveLink activeClassName={styles.active} href="/historias">
+            <a>Histórias</a>
+          </ActiveLink>
+
+          <ActiveLink activeClassName={styles.active} href="/perrengues">
+            <a>Perrengues</a>
+          </ActiveLink>
+
+          <ActiveLink activeClassName={styles.active} href="/duvidas">
+            <a>Dúvidas Frequentes</a>
+          </ActiveLink>
+
+          <ActiveLink activeClassName={styles.active} href="/dicas">
+            <a>Dicas</a>
+          </ActiveLink>
+
+          <ActiveLink activeClassName={styles.active} href="/galeria">
+            <a>Galeria</a>
+          </ActiveLink>
+
+          <ActiveLink activeClassName={styles.active} href="/contato">
+            <a>Contato</a>
+          </ActiveLink>
+
         </nav>
       </div>
     </header>
