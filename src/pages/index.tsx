@@ -9,15 +9,14 @@ export default function Home() {
       </Head>
       <main className={styles.contentContainer}>
         <section className={styles.hero}>
-        <span>👏🏼 Hey, welcome</span>
-        <h1>Template <span>React</span>.</h1>
-        <p>
-          To start your app <br />
-          <span>for free</span>
-        </p>
+          <span>👏🏼 Hey, welcome to</span>
+          <h1>About <span>Cork</span>.</h1>
+          <p>
+            <span>for brazilians 🇧🇷</span>
+          </p>
         </section>
 
-        {/* <img src="/images/avatar.svg" alt="avatar" /> */}
+        <img src="/images/irish.png" alt="ireland" />
       </main>
     </>
   )

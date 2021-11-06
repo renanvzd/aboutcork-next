@@ -12,6 +12,11 @@
   display: flex;
   align-items: center;
 
+  img {
+    padding-top: 5px;
+    width: 45px;
+  }
+
   nav {
     margin-left: 5rem;
     height: 5rem;
@@ -23,6 +28,7 @@
       height: 5rem;
       line-height: 5rem;
       color: var(--gray-300);
+      font-size: 1.2rem;
 
       transition: color 0.2s;
 
@@ -47,7 +53,7 @@
         position: absolute;
         bottom: 1px;
         left: 0;
-        background: var(--yellow-500);
+        background: var(--green-500);
       }
     }
   }
