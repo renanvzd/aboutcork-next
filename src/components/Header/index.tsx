@@ -6,6 +6,7 @@ export function Header() {
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
         <img src="/images/four-leaf.png" alt="Four Leaf" />
+        <h1>Cork</h1>
         <nav>
           <ActiveLink activeClassName={styles.active} href="/">
             <a className={styles.active}>Home</a>
@@ -13,10 +14,6 @@ export function Header() {
 
           <ActiveLink activeClassName={styles.active} href="/historias">
             <a>Histórias</a>
-          </ActiveLink>
-
-          <ActiveLink activeClassName={styles.active} href="/perrengues">
-            <a>Perrengues</a>
           </ActiveLink>
 
           <ActiveLink activeClassName={styles.active} href="/duvidas">
