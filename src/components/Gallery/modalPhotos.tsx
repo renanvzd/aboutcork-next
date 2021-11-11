@@ -15,12 +15,13 @@ export function ModalPhotos({ isOpen, onRequestClose }: OpenGallery) {
 
   return (
     <>
+
       <Modal
         isOpen={isOpen}
         onRequestClose={onRequestClose}
         shouldCloseOnEsc={true}
         // overlayClassName="react-modal-overlay"
-        className="react-modal-content"
+        className={styles.main}
       >
         <div className={styles.container} >
           <div className={styles.box}>
