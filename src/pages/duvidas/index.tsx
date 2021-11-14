@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { GetStaticProps } from 'next';
-import Prismic from '@prismicio/client'
-import Head from 'next/head';
 import { RichText } from 'prismic-dom';
 import { getPrismicClient } from '../../services/prismic';
+import Prismic from '@prismicio/client'
+import Head from 'next/head';
 import styles from './styles.module.scss';
 import { MdArrowForward } from 'react-icons/md'
 
@@ -23,7 +23,7 @@ interface DuvidasProps {
 export default function Dicas({ duvidas }: DuvidasProps) {
   const [excerpt, setExcerpt] = useState<Duvida[]>(duvidas)
 
-  function handleToggleShowAnswer(index) {
+  function handleToggleShowAnswer(index: number) {
     const copyOfArray = [...excerpt];
 
     copyOfArray[index].isOpen = !copyOfArray[index].isOpen;
@@ -41,17 +41,20 @@ export default function Dicas({ duvidas }: DuvidasProps) {
       <main className={styles.container}>
         <div className={styles.duvidas}>
           {duvidas.map((duvida, index) => (
-            <a key={duvida.slug} >
+            <section key={duvida.slug} >
               <time>{duvida.updatedAt}</time>
               <strong
                 onClick={() => handleToggleShowAnswer(index)}>
                 <MdArrowForward />{' '}
                 {duvida.title}
               </strong>
-              {
-                excerpt[index].isOpen ? <p> {duvida.excerpt} </p> : null
+              {excerpt[index].isOpen ?
+                <div
+                  dangerouslySetInnerHTML={{ __html: duvida.excerpt }}
+                />
+                : null
               }
-            </a>
+            </section>
           ))}
 
         </div>
@@ -74,7 +77,7 @@ export const getStaticProps: GetStaticProps = async () => {
     return {
       slug: duvida.uid,
       title: RichText.asText(duvida.data.title),
-      excerpt: duvida.data.content.find(content => content.type === 'paragraph')?.text ?? '',
+      excerpt: RichText.asHtml(duvida.data.content),
       updatedAt: new Date(duvida.last_publication_date).toLocaleDateString('pt-BR', {
         day: '2-digit',
         month: 'long',
