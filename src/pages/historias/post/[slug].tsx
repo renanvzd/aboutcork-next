@@ -18,15 +18,18 @@ interface Post {
   data: {
     title: string;
     subtitle: string;
-    banner: {
-      url: string;
-    };
     author: string;
     content: {
       heading: string;
-      body: {
+      textContent: {
         text: string;
       }[];
+      imageContent: {
+        url: string;
+      };
+    }[];
+    body: {
+      text: string;
     }[];
   };
 }
@@ -46,7 +49,7 @@ export default function Post({ post }: PostProps): JSX.Element {
     (totalContent, currentContent) => {
       const headingWords = currentContent.heading?.split(' ').length || 0;
 
-      const bodyWords = currentContent.body.reduce((totalBody, currentBody) => {
+      const bodyWords = currentContent.textContent.reduce((totalBody, currentBody) => {
         const textWords = currentBody.text.split(' ').length;
         return totalBody + textWords;
       }, 0);
@@ -65,11 +68,6 @@ export default function Post({ post }: PostProps): JSX.Element {
       </Head>
 
       <main className={styles.contentContainer}>
-        <img
-          src={post.data.banner.url}
-          alt="banner"
-          className={styles.banner}
-        />
 
         <section className={styles.hero}>
           <div className={styles.containerPost}>
@@ -97,16 +95,30 @@ export default function Post({ post }: PostProps): JSX.Element {
             <section className={styles.containerContent}>
               <div key={content.heading} className={styles.postContent}>
                 <h2 className={styles.headerPost}>{content.heading}</h2>
+                <img
+                  src={content.imageContent.url}
+                  alt="image"
+                  className={styles.banner}
+                />
                 <div
                   className={styles.contentBody}
                   dangerouslySetInnerHTML={{
-                    __html: RichText.asHtml(content.body),
+                    __html: RichText.asHtml(content.textContent),
                   }}
                 />
               </div>
+
             </section>
           );
         })}
+        <section className={styles.containerContent}>
+          <div
+            className={styles.contentBody}
+            dangerouslySetInnerHTML={{
+              __html: RichText.asHtml(post.data.body),
+            }}
+          />
+        </section>
       </main>
     </>
   );
@@ -115,7 +127,7 @@ export default function Post({ post }: PostProps): JSX.Element {
 export const getStaticPaths: GetStaticPaths = async () => {
   const prismic = getPrismicClient();
   const posts = await prismic.query([
-    Prismic.Predicates.at('document.type', 'posts'),
+    Prismic.Predicates.at('document.type', 'history'),
   ]);
 
   const paths = posts.results.map(post => {
@@ -135,7 +147,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async context => {
   const prismic = getPrismicClient();
   const { slug } = context.params;
-  const response = await prismic.getByUID('posts', String(slug), {});
+  const response = await prismic.getByUID('history', String(slug), {});
+
+  // console.log("Resposta do getByUID");
+  // console.log(JSON.stringify(response, null, 2));
 
   const post = {
     uid: response.uid,
@@ -143,16 +158,17 @@ export const getStaticProps: GetStaticProps = async context => {
     data: {
       title: response.data.title,
       subtitle: response.data.subtitle,
-      banner: {
-        url: response.data.banner.url,
-      },
       author: response.data.author,
       content: response.data.content.map(content => {
         return {
           heading: content.heading,
-          body: [...content.body],
+          textContent: [...content.textcontent],
+          imageContent: {
+            url: content.imagecontent.url,
+          },
         };
       }),
+      body: response.data.body,
     },
   };
 
