@@ -28,10 +28,6 @@ export function Header() {
             <a>Galeria</a>
           </ActiveLink>
 
-          <ActiveLink activeClassName={styles.active} href="/contato">
-            <a>Contato</a>
-          </ActiveLink>
-
         </nav>
       </div>
     </header>
