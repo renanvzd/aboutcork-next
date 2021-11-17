@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import styles from './home.module.scss';
+import MyParticles from '../components/Particles'
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <Head>
         <title>Home | Cork</title>
       </Head>
+      <MyParticles />
       <div className={styles.containerHome}>
         <main className={styles.contentContainer}>
           <section className={styles.hero}>
