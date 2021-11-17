@@ -54,7 +54,9 @@
 .containerHistory {
   width: 100%;
   height: 100vh;
-  background-color: #191242;
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, #121214 0%, rgba(51,103,43,1) 60%, rgb(43, 65, 40) 96%);
+
   
 .contentContainerB {
   max-width: 1120px;
