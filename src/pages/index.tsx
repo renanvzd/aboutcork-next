@@ -11,15 +11,16 @@ export default function Home() {
       <MyParticles />
       <div className={styles.containerHome}>
         <main className={styles.contentContainer}>
-          <section className={styles.hero}>
+          <div className={styles.left}>
             <span>👏🏼 Hey, welcome to</span>
             <h1>About <span>Cork</span></h1>
             <p>
               <span>...for brazilians 🇧🇷</span>
             </p>
-          </section>
-
-          <img src="/images/irish.png" alt="ireland" />
+          </div>
+          <div className={styles.right}>
+            <img src="/images/irish.png" alt="ireland" />
+          </div>
         </main>
       </div>
       <div className={styles.containerHistory}>
