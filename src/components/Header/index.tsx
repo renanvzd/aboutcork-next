@@ -43,7 +43,7 @@ export function Header() {
               </li>
               <li>
                 <ActiveLink activeClassName={styles.active} href="/duvidas">
-                  <a>Dúvidas Frequentes</a>
+                  <a>Dúvidas</a>
                 </ActiveLink>
               </li>
               <li>

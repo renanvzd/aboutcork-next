@@ -82,32 +82,36 @@
 }
 
 
-@media(max-width: 400px) {
+@media(max-width: 800px) {
 
   .containerHome {
+    display: flex;
 
     .contentContainer {
-      
-      .left {
-        width: 55%;
+      flex-direction: column;
+      justify-content: center;
 
+      .left {
+        width: 100%;
+        justify-content: start;
+        
         > span {
-          font-size: 1rem;
+          font-size: 1.5rem;
         }
       
         h1 {
-          font-size: 1.5rem;
+          font-size: 3.5rem;
           line-height: 0.2rem;
-          margin-top: 2.3rem;
+          margin-top: 3.5rem;
         
         span {
-          font-size: 1.5rem;
+          font-size: 3.5rem;
         }
       } 
       
         p {
-          font-size: 1rem;
-          line-height: 1rem;
+          font-size: 2rem;
+          line-height: 3rem;
           margin-top: 1.5rem;
       
           span {
@@ -118,10 +122,11 @@
       }
   
       .right {
-        width: 35%;
+        width: 100%;
        
         img {
-          width: 120px;
+          padding-top: 50px;
+          width: 250px;
         }
       }
     }
