@@ -1,4 +1,3 @@
-
 import Head from 'next/head';
 import Prismic from '@prismicio/client';
 import { useState } from 'react';
@@ -61,9 +60,8 @@ export default function Historias({ historiesPagination }: HomeProps) {
       <Head>
         <title>Histórias e Experiências</title>
       </Head>
-      <main className={styles.containerMain}>
-        <div className={styles.titleHeader}>Histórias de brasileiros que migraram para Cork</div>
-        <div className={styles.contentContainer}>
+      <main className={styles.container}>
+        <div className={styles.historias}>
           <section className={styles.hero}>
             {histories?.map(history => (
               <div className={styles.containerHistory}>
