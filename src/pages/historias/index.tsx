@@ -63,27 +63,33 @@ export default function Historias({ historiesPagination }: HomeProps) {
       <main className={styles.container}>
         <div className={styles.historias}>
           <section className={styles.hero}>
-            {histories?.map(history => (
-              <div className={styles.containerHistory}>
+            <div className={styles.titleSection}>
+              <p>Historias de quem se aventurou</p>
+              <p>Aqui você encontrará histórias de quem decidiu se aventurar nessa cidade irlandesa</p>
+            </div>
+            <div className={styles.containerHistory}>
+              {histories?.map(history => (
                 <Link key={history.uid} href={`/historias/post/${history.uid}`}>
                   <a>
-                    <div className={styles.titleHistory}>{history.data.title}</div>
-                    <p>{history.data.subtitle}</p>
-                    <div className={styles.subsection}>
-                      <div className={styles.schedule}>
-                        <AiOutlineSchedule color="#BBBBBB" />
-                        <span>{history.first_publication_date}</span>
-                      </div>
+                    <div className={styles.subContainerHistory}>
+                      <div className={styles.titleHistory}>{history.data.title}</div>
+                      <p>{history.data.subtitle}</p>
+                      <div className={styles.subsection}>
+                        <div className={styles.schedule}>
+                          <AiOutlineSchedule color="#BBBBBB" />
+                          <span>{history.first_publication_date}</span>
+                        </div>
 
-                      <div className={styles.author}>
-                        <FiUser color="#BBBBBB" />
-                        <span>{history.data.author}</span>
+                        <div className={styles.author}>
+                          <FiUser color="#BBBBBB" />
+                          <span>{history.data.author}</span>
+                        </div>
                       </div>
                     </div>
                   </a>
                 </Link>
-              </div>
-            ))}
+              ))}
+            </div>
             {nextPage && (
               <button type="button" onClick={handleLoadMoreHistories}>
                 <div className={styles.loadMorePosts}>
