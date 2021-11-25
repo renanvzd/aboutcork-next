@@ -9,10 +9,10 @@ export default function MyParticles() {
         params={{
           "particles": {
             "number": {
-              "value": 120,
+              "value": 150,
               "density": {
                 "enable": true,
-                "value_area": 2500
+                "value_area": 1500
               }
             },
             "line_linked": {

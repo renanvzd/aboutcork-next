@@ -11,6 +11,7 @@ export default function Home() {
       <MyParticles />
       <div className={styles.containerHome}>
         <main className={styles.contentContainer}>
+          <MyParticles />
           <div className={styles.left}>
             <span>👏🏼 Hey, welcome to</span>
             <h1>About <span>Cork</span></h1>
@@ -18,6 +19,7 @@ export default function Home() {
               <span>...for brazilians 🇧🇷</span>
             </p>
           </div>
+          <MyParticles />
           <div className={styles.right}>
             <img src="/images/irish.png" alt="ireland" />
           </div>

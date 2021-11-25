@@ -1,4 +1,14 @@
 .particles {
-  display: relative;
-  height: 50px;
+  position: absolute;
+  display: absolute;
+}
+
+@media(max-width: 900px) {
+  .particles {
+
+    display: absolute;
+    position: absolute;
+    padding-top: 5rem;
+  }  
+
 }
