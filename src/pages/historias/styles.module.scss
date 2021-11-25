@@ -109,7 +109,7 @@
   
   
   .historias {
-    width: 300px;
+    width: 270px;
     margin: 5rem auto 0;
   
     
@@ -121,7 +121,8 @@
       }
   
       .containerHistory {
-        border: 2px solid;
+        background-color: #282a29;
+        border: 1px solid;
         padding: 20px 20px;
         box-shadow: 0 0 1em green;
   
@@ -132,19 +133,19 @@
   
         .titleHistory {
           color: #F8F8F8;
-          font-size: 28px;
+          font-size: 1.1rem;
           text-align: justify;
-          line-height: 33.89px;
+          line-height: 22px;
           font-weight: 700;
-  
         }
         
         p {
           padding-top: 15px;
-          color: #D7D7D7;
+          color: #eeeeee;
+          text-align: justify;
           font-weight: 400;
-          font-size: 18px;
-          line-height: 25px;
+          font-size: 0.9rem;
+          line-height: 18px;
         }
       }
   
@@ -154,8 +155,9 @@
     .subsection {
       width: 200px;
       height: 20px;
-      color: #BBBBBB;
+      color: #e6e6e6;
       margin-top: 15px;
+      margin-bottom: 15px;
   
       .schedule {
         padding-right: 30px;
@@ -163,14 +165,17 @@
   
         span {
           padding-left: 5px;
+          font-size: 0.8rem;
         }
       }
   
       .author {
         display: inline-block;
-  
+        padding-bottom: 25px;
+
         span {
           padding-left: 5px;
+          font-size: 0.8rem;
         }
       }
     }
