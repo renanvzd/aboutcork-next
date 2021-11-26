@@ -22,6 +22,7 @@ interface DuvidasProps {
 
 export default function Dicas({ duvidas }: DuvidasProps) {
   const [excerpt, setExcerpt] = useState<Duvida[]>(duvidas)
+  const [searchTerm, setSearchTerm] = useState("");
 
   function handleToggleShowAnswer(index: number) {
     const copyOfArray = [...excerpt];
@@ -50,8 +51,27 @@ export default function Dicas({ duvidas }: DuvidasProps) {
 
             </p>
           </div>
+          <div className={styles.searchEngine}>
+            <div>
+              <p>Pesquise pelo título: </p>
+            </div>
+            <input
+              type="text"
+              placeholder="Search..."
+              onChange={(event) => {
+                setSearchTerm(event.target.value);
+              }}
+            />
+
+          </div>
           <div className={styles.containerDuvidas}>
-            {duvidas.map((duvida, index) => (
+            {duvidas.filter((duvida) => {
+              if (searchTerm == "") {
+                return duvida;
+              } else if (duvida.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+                return duvida;
+              }
+            }).map((duvida, index) => (
               <section key={duvida.slug} >
                 <time>{duvida.updatedAt}</time>
                 <strong

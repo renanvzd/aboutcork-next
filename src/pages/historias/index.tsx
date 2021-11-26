@@ -30,6 +30,8 @@ interface HomeProps {
 
 export default function Historias({ historiesPagination }: HomeProps) {
   const [nextPage, setNextPage] = useState<string>(historiesPagination.next_page);
+  const [searchTerm, setSearchTerm] = useState("");
+
 
   const formattedHistories = historiesPagination.results.map(history => {
     return {
@@ -67,8 +69,28 @@ export default function Historias({ historiesPagination }: HomeProps) {
               <p>Historias de quem se aventurou</p>
               <p>Aqui você encontrará histórias de quem decidiu se aventurar nessa cidade irlandesa</p>
             </div>
+
+            <div className={styles.searchEngine}>
+              <div>
+                <p>Pesquise pelo título ou autor: </p>
+              </div>
+              <input
+                type="text"
+                placeholder="Search..."
+                onChange={(event) => {
+                  setSearchTerm(event.target.value);
+                }}
+              />
+
+            </div>
             <div className={styles.containerHistory}>
-              {histories?.map(history => (
+              {histories?.filter((history) => {
+                if (searchTerm == "") {
+                  return history;
+                } else if (history.data.title.toLowerCase().includes(searchTerm.toLowerCase()) || history.data.author.toLowerCase().includes(searchTerm.toLowerCase())) {
+                  return history;
+                }
+              }).map(history => (
                 <Link key={history.uid} href={`/historias/post/${history.uid}`}>
                   <a>
                     <div className={styles.subContainerHistory}>
