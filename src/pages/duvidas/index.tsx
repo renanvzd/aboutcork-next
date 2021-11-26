@@ -40,23 +40,34 @@ export default function Dicas({ duvidas }: DuvidasProps) {
 
       <main className={styles.container}>
         <div className={styles.duvidas}>
-          {duvidas.map((duvida, index) => (
-            <section key={duvida.slug} >
-              <time>{duvida.updatedAt}</time>
-              <strong
-                onClick={() => handleToggleShowAnswer(index)}>
-                <MdArrowForward />{' '}
-                {duvida.title}
-              </strong>
-              {excerpt[index].isOpen ?
-                <div
-                  dangerouslySetInnerHTML={{ __html: duvida.excerpt }}
-                />
-                : null
-              }
-            </section>
-          ))}
+          <div className={styles.titleSection}>
+            <p>Dúvidas gerais</p>
+            <p>Para você que está planejando ir para Cork (ou até mesmo qualquer outro lugar), é muito interessante que participe de grupos que estão alinhados com o mesmo objetivo que o seu, seja pelo Facebook, Whatsapp, Telegram... <br /><br />
+              Esta página foi feita justamente para reunir as diversas perguntas que frequentemente são feitas nesses grupos! O ciclo não para, sempre tem gente indo e sempre tem gente que já está lá e descobriu as respostas para as dúvidas que um dia teve e que agora pode ajudar você! <br />
+              A ideia aqui é NOS AJUDARMOS! <br /><br />
+              Seja fazendo as perguntas, seja entregando as respostas.
 
+
+            </p>
+          </div>
+          <div className={styles.containerDuvidas}>
+            {duvidas.map((duvida, index) => (
+              <section key={duvida.slug} >
+                <time>{duvida.updatedAt}</time>
+                <strong
+                  onClick={() => handleToggleShowAnswer(index)}>
+                  <MdArrowForward />{' '}
+                  {duvida.title}
+                </strong>
+                {excerpt[index].isOpen ?
+                  <div
+                    dangerouslySetInnerHTML={{ __html: duvida.excerpt }}
+                  />
+                  : null
+                }
+              </section>
+            ))}
+          </div>
         </div>
       </main>
     </>
