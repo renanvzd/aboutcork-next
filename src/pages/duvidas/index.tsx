@@ -5,7 +5,7 @@ import { getPrismicClient } from '../../services/prismic';
 import Prismic from '@prismicio/client'
 import Head from 'next/head';
 import styles from './styles.module.scss';
-import { MdArrowForward } from 'react-icons/md'
+import { TiArrowSortedDown } from 'react-icons/ti'
 
 
 type Duvida = {
@@ -74,13 +74,15 @@ export default function Dicas({ duvidas }: DuvidasProps) {
             }).map((duvida, index) => (
               <section key={duvida.slug} >
                 <time>{duvida.updatedAt}</time>
-                <strong
+                <div className={styles.containerQuestion}
                   onClick={() => handleToggleShowAnswer(index)}>
-                  <MdArrowForward />{' '}
-                  {duvida.title}
-                </strong>
+                  <span className={styles.titleQuestion}>
+                    {duvida.title}
+                  </span>
+                  <TiArrowSortedDown size={20} />
+                </div>
                 {excerpt[index].isOpen ?
-                  <div
+                  <div className={styles.excerpt}
                     dangerouslySetInnerHTML={{ __html: duvida.excerpt }}
                   />
                   : null
