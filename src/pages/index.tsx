@@ -1,30 +1,23 @@
 import Head from 'next/head';
+import { useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { HomeFirstSection } from '../components/HomeFirstSection';
 import styles from './home.module.scss';
-import MyParticles from '../components/Particles'
 
 export default function Home() {
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, [])
+
   return (
     <>
       <Head>
         <title>Home | Cork</title>
       </Head>
-      <MyParticles />
-      <div className={styles.containerHome}>
-        <main className={styles.contentContainer}>
-          <MyParticles />
-          <div className={styles.left}>
-            <span>👏🏼 Hey, welcome to</span>
-            <h1>About <span>Cork</span></h1>
-            <p>
-              <span>...for brazilians 🇧🇷</span>
-            </p>
-          </div>
-          <MyParticles />
-          <div className={styles.right}>
-            <img src="/images/irish.png" alt="ireland" />
-          </div>
-        </main>
-      </div>
+
+      <HomeFirstSection />
+
       <div className={styles.containerHistory}>
         <main className={styles.contentContainerB}>
           <div className={styles.contentText}>
