@@ -1,9 +1,16 @@
+.bodyContainer {
+  background: linear-gradient(180deg, rgba(18,18,20,0.8340317328103116) 6%, rgba(125,248,132,1) 50%, rgba(18,18,20,0.8116227692248774) 94%);
+
+}
+
+
+
 .containerHistory {
   padding-top: 1rem;
   padding-bottom: 6rem;
   width: 100%;
   height: auto;
-  background: linear-gradient(180deg, #121214 0%, rgba(51,103,43,1) 60%, rgb(43, 65, 40) 96%);
+  
   
   .contentContainerB {
     max-width: auto;
