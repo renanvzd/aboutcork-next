@@ -3,6 +3,8 @@ import { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { HomeFirstSection } from '../components/HomeFirstSection';
+import { HomeSecSection } from '../components/HomeSecSection';
+import { HomeThirdSection } from '../components/HomeThirdSection';
 import styles from './home.module.scss';
 
 export default function Home() {
@@ -18,7 +20,14 @@ export default function Home() {
 
       <HomeFirstSection />
 
-      <div className={styles.containerHistory}>
+
+      <HomeSecSection />
+
+
+      <HomeThirdSection />
+
+
+      {/* <div className={styles.containerHistory}>
         <main className={styles.contentContainerB}>
           <div className={styles.contentText}>
             <p><b>About Cork</b> é um blog que tem o objetivo de integrar a comunidade brasileira na cidade de Cork, na Irlanda.</p>
@@ -76,7 +85,7 @@ export default function Home() {
             </div>
           </div>
         </main>
-      </div>
+      </div> */}
     </>
   )
 }
