@@ -23,6 +23,7 @@
     "react-particles-js": "^3.6.0",
     "remove": "^0.1.5",
     "sass": "^1.42.1",
+    "styled-components": "^5.3.3",
     "tsparticles": "^1.37.3"
   },
   "devDependencies": {

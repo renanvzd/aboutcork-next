@@ -1,14 +1,22 @@
 .container {
-  margin: 0 auto;
-  max-width: 100rem;
-  padding: 0 2rem;
-  margin: 0 5rem;
+  width: 100%;
+  margin: 2rem auto;
+  // max-width: 85rem;
+  padding: 5rem 1rem;
+  
+  
+  
+  @media(max-width:1450px) {
+    max-width: 70rem;
+  }
+  @media(max-width:1000px) {
+    max-width: 50rem;
+  }
+  @media(max-width:700px) {
+    padding: 0 2rem 5rem 2rem;
+  }
+  background: linear-gradient(180deg, rgba(18,18,20,1) 6%, rgba(135,243,147,1) 100%);
 
-  background: linear-gradient(180deg, rgba(18,18,20,0.8340317328103116) 6%, rgba(125,248,132,1) 50%, rgba(18,18,20,0.8116227692248774) 94%);
-
-  border-left: aqua;
-  border: solid;
-  border-radius: 2%;
 
   @media(max-width:1450px) {
     max-width: 70rem;
@@ -19,23 +27,38 @@
   }
 
   @media(max-width:500px) {
-    margin: 0 2rem;
+    margin: 0 0rem;
   }
 
-  > section {
+  .sectionTitle {
     width: 100%;
-    display: flex;
+    margin: 2rem auto;
+    max-width: 85rem;
+    padding: 0 1rem;
+
+    @media(max-width:1450px) {
+      max-width: 70rem;
+    }
+    @media(max-width:1000px) {
+      max-width: 50rem;
+    }
+    @media(max-width:700px) {
+      margin: 0;
+      padding: 0 0rem;
+      padding: 4rem 1rem 0 1rem;
+    }
+    
   
     h1 {
-      margin-top: 6rem;
-      color: #2ddf7a;
-      font-size: 5.5rem;
+      margin-top: 2rem;
+      color: white;
+      font-size: 4.5rem;
       @media(max-width:999px) {
         margin-top: 3.5rem;
         font-size: 3rem;
       }
       @media(max-width:600px) {
-        margin-top: 4rem;
+        padding-top: 4rem;
         font-size: 2.2rem;
       }
     }
@@ -43,21 +66,23 @@
 }
 
 .itemContainer {
-  padding: 2.5rem 5rem 0 5rem;
-  // height: 30rem;
-  display: flex;
-  transition: 0.5s;
+  margin: 0rem auto;
+  max-width: 85rem;
+  
+  padding: 5rem 5rem 0rem 5rem;
+  
+
 
 @media(max-width:1000px) {
   padding: 1.5rem 1rem 0 1rem;
 }
 @media(max-width:600px) {
-  padding: 1.5rem 0rem 0 0rem;
+  padding: 3rem 0rem 0 0;
+  margin: 0;
 }
 
   p {
     font-size: 1.5rem;
-    font-weight: 300;
     line-height: 2.5rem;
     text-align: justify;
     color: black;
@@ -68,18 +93,11 @@
     @media(max-width:600px) {
       font-size: 1.31rem;
       line-height: 1.5rem;
+      padding: 0rem 0rem 2rem 0rem;
+
     }
   }
 
-  p:first-child {
-    padding-top: 1rem;
-    padding-bottom: 0rem;
-  }
-
-  p:last-child {
-    padding-top: 2rem;
-    padding-bottom: 6rem;
-  }
 }
 
 

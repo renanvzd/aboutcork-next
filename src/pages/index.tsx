@@ -4,7 +4,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { HomeFirstSection } from '../components/HomeFirstSection';
 import { HomeSecSection } from '../components/HomeSecSection';
-import { HomeThirdSection } from '../components/HomeThirdSection';
+import HomeThirdSection from '../components/HomeThirdSection';
 import styles from './home.module.scss';
 
 export default function Home() {
@@ -20,9 +20,7 @@ export default function Home() {
 
       <HomeFirstSection />
 
-
       <HomeSecSection />
-
 
       <HomeThirdSection />
 

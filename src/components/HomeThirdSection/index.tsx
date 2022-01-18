@@ -1,11 +1,34 @@
-import styles from "./styles.module.scss";
+import SectionTitle from '../SectionTitle';
+import ExperienceItem from './ExperienceItem';
+import { Container, ContainerExperience } from './styles';
 
-export function HomeThirdSection() {
+function Experiences() {
   return (
-    <>
-      <div className={styles.container}>
+    <Container>
+      <ContainerExperience>
+        <SectionTitle title=" What will I find?" description="" />
 
-      </div>
-    </>
+        <section>
+          <ExperienceItem
+            title="Histórias"
+            description="Histórias de quem se aventurou e explorou!"
+          />
+          <ExperienceItem
+            title="Dúvidas"
+            description="Aquelas dúvidas frequentes que sempre passam pela cabeça..."
+          />
+          <ExperienceItem
+            title="Dicas"
+            description="Confira aqui dicas gerais que podem auxiliar você nessa caminhada."
+          />
+          <ExperienceItem
+            title="Galeria"
+            description="Fotos de eventos e da cidade."
+          />
+        </section>
+      </ContainerExperience>
+    </Container>
   );
 }
+
+export default Experiences;
