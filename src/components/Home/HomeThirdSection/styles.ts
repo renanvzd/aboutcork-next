@@ -45,10 +45,10 @@ export const ContainerExperience = styled.section`
 
 export const ItemContainer = styled.div`
   > div {
+    cursor: pointer;
     background: linear-gradient(2deg, #88ffb9 65%, #11172B 100%);
-    padding: 1rem;
-    padding-top: 2.5rem;
-    height: 15rem;
+    padding: 2.5rem 1rem 1rem 1rem;
+    
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -66,23 +66,16 @@ export const ItemContainer = styled.div`
 
     h2 {
       color: #0b0b0f;
-      /* background: linear-gradient(90deg, rgba(255,255,255,1) 6%, rgba(87,87,87,1) 100%); */
-      /* background: -webkit-linear-gradient(180deg,  rgba(87,87,87,1) 50%, rgba(255,255,255,1) 50%); */
-      /* background: linear-gradient(to right, 
-        rgba(116,186,106,1) 320%, 
-        rgba(3,28,0,1) 60%
-        );
-	    -webkit-background-clip: text;
-	    -webkit-text-fill-color: transparent; */
-	      font-size: 1.5rem;
+      font-size: 1.4rem;
       font-weight: 300;
       margin-bottom: 1rem;
     }
 
     p {
-      color: '#C4C4C4';
+      padding-top: 2rem;  
+      color: #0b0b0f;
       font-size: 1rem;
-      font-weight: 300;
+      font-weight: 600;
     }
   }
 
@@ -97,7 +90,7 @@ export const ItemContainer = styled.div`
 
   @media (max-width: 1000px) {
     > div {
-      height: 15rem;
+      height: 11rem;
       padding-top: 1.5rem;
 
       h1 {
@@ -130,11 +123,12 @@ export const ItemContainer = styled.div`
       max-width: 100%;
 
       h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
 
       h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
       }
 
       p {
