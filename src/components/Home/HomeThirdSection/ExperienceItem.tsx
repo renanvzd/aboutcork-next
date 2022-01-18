@@ -9,8 +9,7 @@ interface ExperienciaProps {
 
 export default function ExperienciaItem({ title, description, link }: ExperienciaProps) {
   return (
-    // <ItemContainer data-aos="fade-up">
-    <ItemContainer>
+    <ItemContainer data-aos="fade-up">
       <Link href={link}>
         <div>
           <h1>{title}</h1>
