@@ -2,9 +2,9 @@ import Head from 'next/head';
 import { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import { HomeFirstSection } from '../components/HomeFirstSection';
-import { HomeSecSection } from '../components/HomeSecSection';
-import HomeThirdSection from '../components/HomeThirdSection';
+import { HomeFirstSection } from '../components/Home/HomeFirstSection';
+import { HomeSecSection } from '../components/Home/HomeSecSection';
+import { HomeThirdSection } from '../components/Home/HomeThirdSection';
 import styles from './home.module.scss';
 
 export default function Home() {

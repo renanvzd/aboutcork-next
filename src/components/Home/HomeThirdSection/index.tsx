@@ -2,7 +2,7 @@ import SectionTitle from '../SectionTitle';
 import ExperienceItem from './ExperienceItem';
 import { Container, ContainerExperience } from './styles';
 
-function Experiences() {
+export function HomeThirdSection() {
   return (
     <Container>
       <ContainerExperience>
@@ -31,4 +31,3 @@ function Experiences() {
   );
 }
 
-export default Experiences;

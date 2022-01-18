@@ -1,4 +1,4 @@
-import { ActiveLink } from '../ActiveLink';
+import { ActiveLink } from './ActiveLink';
 import { useState } from 'react'
 import styles from './styles.module.scss';
 
