@@ -70,38 +70,38 @@ export default function Post({ post }: PostProps): JSX.Element {
       <main className={styles.contentContainer}>
 
         <section className={styles.hero}>
-          <div className={styles.containerPost}>
-            <div className={styles.titlePost}>{post.data.title}</div>
-            <div className={styles.subsection}>
-              <div className={styles.schedule}>
-                <FiCalendar />
-                <span>{formatDate(post.first_publication_date)}</span>
-              </div>
-              <div className={styles.author}>
-                <FiUser />
-                <span> {post.data.author}</span>
-              </div>
-              <div className={styles.timeReading}>
-                <time>
-                  <FiClock />
-                  <span>{timeEstimmed} min</span>
-                </time>
-              </div>
+
+          <div className={styles.titlePost}>{post.data.title}</div>
+          <div className={styles.subsection}>
+            <div className={styles.schedule}>
+              <FiCalendar />
+              <span>{formatDate(post.first_publication_date)}</span>
+            </div>
+            <div className={styles.author}>
+              <FiUser />
+              <span> {post.data.author}</span>
+            </div>
+            <div className={styles.timeReading}>
+              <time>
+                <FiClock />
+                <span>{timeEstimmed} min</span>
+              </time>
             </div>
           </div>
+
         </section>
         {post.data.content.map(content => {
           return (
             <section className={styles.containerContent}>
               <div key={content.heading} className={styles.postContent}>
-                <h2 className={styles.headerPost}>{content.heading}</h2>
-                <img
+                {/* <img
                   src={content.imageContent.url}
                   alt="image"
                   className={styles.banner}
-                />
+                /> */}
+                <h2 className={styles.headerPost}>{content.heading}</h2>
                 <div
-                  className={styles.contentBody}
+                  className={styles.contentBody1}
                   dangerouslySetInnerHTML={{
                     __html: RichText.asHtml(content.textContent),
                   }}
@@ -113,7 +113,7 @@ export default function Post({ post }: PostProps): JSX.Element {
         })}
         <section className={styles.containerContent}>
           <div
-            className={styles.contentBody}
+            className={styles.contentBody2}
             dangerouslySetInnerHTML={{
               __html: RichText.asHtml(post.data.body),
             }}
