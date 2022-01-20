@@ -15,6 +15,7 @@
 
     .titleSection {
       max-width: 1000px;
+      padding-bottom: 5rem;
       
       p {
         font-size: 2.5rem;
@@ -23,7 +24,6 @@
         
         & + p {
           padding-top: 2rem;
-          padding-bottom: 5rem;
           font-size: 1.5rem;
         }
       }
@@ -74,7 +74,7 @@
       padding: 30px 100px;
       box-shadow: 0 0 1em green;
       border-radius: 1.5rem;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
 
       &:hover {
         filter: brightness(2);
@@ -91,7 +91,6 @@
         text-align: justify;
         line-height: 33.89px;
         font-weight: 700;
-
       }
       
       p {
@@ -101,6 +100,12 @@
         font-size: 18px;
         line-height: 25px;
       }
+
+      p:nth-of-type(1) {
+        font-weight: bold;
+        color: #50e233;
+      }
+
     }
 
 
@@ -155,36 +160,33 @@
   }
 }
 
-@media(max-width: 800px) {
+@media(max-width: 600px) {
   .container {
     width: 100%;
     margin: 0 auto;
-    padding: 5rem 2rem;
     display: relative;
   
-  
   .historias {
-    width: 260px;
-    margin: 3.5rem auto 0;
+    margin: 3rem auto 0;
   
-    
     .hero {
-       font-family: Inter;
   
        .titleSection {
         max-width: 1000px;
-        
+        padding-bottom: 2rem;
+
         p {
+          padding-bottom: 1rem;
           font-size: 1.5rem;
           justify-content: center;
           text-align: center;
           
           & + p {
-            padding-top: 2rem;
-            padding-bottom: 3.5rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
             font-size: 1.1rem;
             text-align: justify;
-            line-height: 20px;
+            line-height: 22px;
           }
         }
       }
@@ -198,16 +200,15 @@
     
         p {
           color: #CDC8B1;
-          font-size: 1.2rem;
+          font-size: 1.1rem;
           padding-bottom: 10px;
           text-align: left;
           padding-right: 0rem;
         }
     
         input {
-          width: 250px;
+          width: 260px;
           height: 40px;
-          padding-left: 10px;
           font-size: 1rem;
     
           &:hover, &:focus, &:focus {

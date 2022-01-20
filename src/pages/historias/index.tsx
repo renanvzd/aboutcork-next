@@ -15,6 +15,7 @@ interface History {
   data: {
     title: string;
     subtitle: string;
+    tema: string;
     author: string;
   };
 }
@@ -66,13 +67,14 @@ export default function Historias({ historiesPagination }: HomeProps) {
         <div className={styles.historias}>
           <section className={styles.hero}>
             <div className={styles.titleSection}>
-              <p>Historias de quem se aventurou</p>
-              <p>Aqui você encontrará histórias de quem decidiu se aventurar nessa cidade irlandesa</p>
+              <p>Histórias</p>
+              <p>Histórias e relatos sobre os mais variados temas para que outros brasileiros possam aprender e até mesmo se inspirar! </p>
+              <p>Contribua para a comunidade e conte também sua história!</p>
             </div>
 
             <div className={styles.searchEngine}>
               <div>
-                <p>Pesquise pelo título ou autor: </p>
+                <p>Pesquise pelo título, autor ou tema: </p>
               </div>
               <input
                 type="text"
@@ -87,7 +89,11 @@ export default function Historias({ historiesPagination }: HomeProps) {
               {histories?.filter((history) => {
                 if (searchTerm == "") {
                   return history;
-                } else if (history.data.title.toLowerCase().includes(searchTerm.toLowerCase()) || history.data.author.toLowerCase().includes(searchTerm.toLowerCase())) {
+                } else if (
+                  history.data.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                  history.data.tema.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                  history.data.author.toLowerCase().includes(searchTerm.toLowerCase())
+                ) {
                   return history;
                 }
               }).map(history => (
@@ -95,6 +101,7 @@ export default function Historias({ historiesPagination }: HomeProps) {
                   <a>
                     <div className={styles.subContainerHistory}>
                       <div className={styles.titleHistory}>{history.data.title}</div>
+                      <p>Tema: {history.data.tema}</p>
                       <p>{history.data.subtitle}</p>
                       <div className={styles.subsection}>
                         <div className={styles.schedule}>
@@ -132,8 +139,8 @@ export const getStaticProps: GetStaticProps = async () => {
   const historiesResponse = await prismic.query(
     [Prismic.predicates.at('document.type', 'history')],
     {
-      fetch: ['history.title', 'history.subtitle', 'history.author'],
-      pageSize: 1,
+      fetch: ['history.title', 'history.subtitle', 'history.author', 'history.tema'],
+      pageSize: 100,
     }
   );
 
@@ -144,6 +151,7 @@ export const getStaticProps: GetStaticProps = async () => {
       data: {
         title: history.data.title,
         subtitle: history.data.subtitle,
+        tema: history.data.tema,
         author: history.data.author,
       },
     };

@@ -11,7 +11,7 @@ export function HomeThirdSection() {
         <section>
           <ExperienceItem
             title="Histórias"
-            description="Histórias de quem se aventurou e explorou!"
+            description="Histórias e relatos sobre experiências vividas!"
             link="/historias"
           />
           <ExperienceItem
