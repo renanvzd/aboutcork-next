@@ -110,16 +110,17 @@
 
   .logoHeader {
     display: flex;
+    align-items: center;
   }
 
   .logo {
     padding-top: 5px;
-    width: 45px;
+    width: 40px;
   }
 
   h1 {
     padding-left: 10px;
-    font-size: 3rem;
+    font-size: 2.7rem;
   }
 
   ul {
