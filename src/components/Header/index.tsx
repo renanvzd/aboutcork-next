@@ -1,24 +1,33 @@
 import { ActiveLink } from './ActiveLink';
 import { useState } from 'react'
 import styles from './styles.module.scss';
+import { FiLogOut } from 'react-icons/fi';
+
 
 
 export function Header() {
-  const [sidebar, setSidebar] = useState(true)
-
-  const showSidebar = () => setSidebar(!sidebar)
+  const [classOn, setClassOn] = useState(false);
 
   return (
     <>
       <header className={styles.headerContainer}>
         <div className={styles.headerContent}>
-          <img className={styles.logo} src="/images/four-leaf.png" alt="Four Leaf" />
-          <h1>Cork</h1>
+          <div className={styles.logoHeader}>
+            <img className={styles.logo} src="/images/four-leaf.png" alt="Four Leaf" />
+            <h1>Cork</h1>
+          </div>
+
           <div className={styles.logoWithLinks}>
-            <img className={styles.barMenu} onClick={showSidebar} src='https://i.imgur.com/cmahuLK.png' alt='menu' />
-            <nav className={sidebar ? styles.navMenuActive : styles.navMenu}>
-              <div className={styles.listItems}>
-                <ul onClick={showSidebar}>
+            <div className={classOn ? styles.menuSectionOn : styles.menuSection} onClick={() => setClassOn(!classOn)}>
+              <div className={styles.menuToggle}>
+                <div className={styles.one}></div>
+                <div className={styles.two}></div>
+                <div className={styles.three}></div>
+              </div>
+
+              <nav className={styles.listItems}>
+
+                <ul>
                   <li>
                     <ActiveLink activeClassName={styles.active} href="/">
                       <a className={styles.active}>Home</a>
@@ -44,11 +53,16 @@ export function Header() {
                       <a>Galeria</a>
                     </ActiveLink>
                   </li>
+                  {/* <li>
+                  <a className={classOn ? styles.show : styles.hide} href="/login">Voltar <FiLogOut className={styles.FiLogOut} /> </a>
+
+                </li> */}
                 </ul>
-              </div>
-            </nav>
+              </nav>
+            </div>
           </div>
         </div>
+
       </header>
     </>
   )
