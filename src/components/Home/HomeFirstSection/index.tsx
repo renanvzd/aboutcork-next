@@ -4,8 +4,8 @@ import MyParticles from '../Particles'
 export function HomeFirstSection() {
   return (
     <>
+      <MyParticles />
       <div data-aos="fade-up" >
-        <MyParticles />
         <div className={styles.containerHome}>
           <main className={styles.contentContainer}>
             <MyParticles />

@@ -1,4 +1,3 @@
-import React from "react";
 import Particles from "react-particles-js";
 import styles from './styles.module.scss';
 
@@ -19,7 +18,7 @@ export default function MyParticles() {
               "enable": false,
             },
             "move": {
-              "direction": "right",
+              // "direction": "down",
               "speed": 0.1
             },
             "size": {
