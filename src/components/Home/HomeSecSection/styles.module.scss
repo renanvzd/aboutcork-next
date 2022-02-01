@@ -50,34 +50,32 @@
 .itemContainer {
   margin: 0rem auto;
   max-width: 85rem;
-  
-  padding: 5rem 5rem 0rem 5rem;
-  
+  padding: 5rem 0rem 0rem 0rem;
 
-
-@media(max-width:1000px) {
-  padding: 1.5rem 1rem 0 1rem;
-}
-@media(max-width:600px) {
-  padding: 3rem 0rem 0 0;
-  margin: 0;
-}
+  @media(max-width:1100px) {
+    padding: 2.5rem 1rem 0rem 1rem;
+  }
+  @media(max-width:600px) {
+    padding: 3rem 0rem 0 0;
+    margin: 0;
+  }
 
   p {
-    font-size: 1.5rem;
-    line-height: 2.5rem;
+    font-size: 2rem;
+    line-height: 3rem;
     text-align: justify;
     color: black;
     padding: 0rem 0rem 0.5rem 0rem;
 
-    @media(max-width:1000px) {
-     
-    }
     @media(max-width:600px) {
-      font-size: 1.31rem;
-      line-height: 1.5rem;
+      font-size: 1.30rem;
+      line-height: 1.9rem;
       padding: 0rem 0rem 2rem 0rem;
     }
+  }
+
+  p:last-child {
+    font-weight: 600;
   }
 
 }
