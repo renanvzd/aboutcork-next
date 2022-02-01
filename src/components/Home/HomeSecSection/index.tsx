@@ -12,9 +12,10 @@ export function HomeSecSection() {
 
           <div className={styles.itemContainer}>
             <div>
-              <p>About Cork é um blog que quer descomplicar várias assuntos para a comunidade brasileira que vive em Cork, na Irlanda.</p>
-              <p>A ideia é trazer conteúdo de forma simples, rápida e direta sobre dúvidas, dicas, histórias e recomendações!</p>
-              <p>Ficamos à disposição para disponibilizar o espaço para qualquer assunto que possam auxiliar outros brasileiros!</p>
+              <p>About Cork é um blog que quer trazer os relatos e experiências vividas por brasileiros em Cork que possam inspirar e ensinar outros brasileiros.
+              </p>
+              <p>Também trazemos conteúdo de forma simples, rápida e direta sobre dúvidas, dicas e recomendações!</p>
+              <p>Disponibilizamos o espaço para que todos possam contribuir com aquilo que possa somar para a nossa comunidade! </p>
               <p>After all, this is Cork for brazilians!!</p>
             </div>
 

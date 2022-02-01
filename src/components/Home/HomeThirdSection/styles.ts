@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
 width: 100%;
-margin: 12rem auto;
+margin: 8rem auto;
 max-width: 85rem;
 padding: 0 1rem;
 
@@ -13,21 +13,21 @@ padding: 0 1rem;
   max-width: 50rem;
 }
 @media(max-width:700px) {
-  margin: 8rem auto;
+  margin: 6rem auto;
   padding: 0 2rem;
 }
 `
 
-export const ContainerExperience = styled.section`
+export const ContainerSquad = styled.section`
   width: 100%;
 
   > section {
     width: 100%;
-    margin-top: 7rem;
+    margin-top: 5rem;
     display: flex;
     gap: 1.5rem;
 
-    padding-bottom: 8rem;
+    padding-bottom: 6rem;
     border-bottom: 3px solid #0EE7B7;
 
     @media (max-width: 1000px) {
@@ -36,7 +36,7 @@ export const ContainerExperience = styled.section`
 
     @media (max-width: 700px) {
       flex-direction: column;
-      margin-top: 5rem;
+      margin-top: 4rem;
       padding-bottom: 5rem;
       gap: 2rem;
     }

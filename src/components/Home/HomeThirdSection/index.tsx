@@ -1,12 +1,12 @@
 import SectionTitle from '../SectionTitle';
 import ExperienceItem from './ExperienceItem';
-import { Container, ContainerExperience } from './styles';
+import { Container, ContainerSquad } from './styles';
 
 export function HomeThirdSection() {
   return (
     <Container>
-      <ContainerExperience>
-        <SectionTitle title=" What will I find?" description="" />
+      <ContainerSquad>
+        <SectionTitle title=" What will I find?" />
 
         <section>
           <ExperienceItem
@@ -30,7 +30,7 @@ export function HomeThirdSection() {
             link="/galeria"
           />
         </section>
-      </ContainerExperience>
+      </ContainerSquad>
     </Container>
   );
 }
