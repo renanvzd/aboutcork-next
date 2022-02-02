@@ -44,7 +44,7 @@ export function Header() {
                     </ActiveLink>
                   </li>
                   <li>
-                    <ActiveLink activeClassName={styles.active} href="/dicas">
+                    <ActiveLink activeClassName={styles.active} href="/recomendacoes">
                       <a>Dicas</a>
                     </ActiveLink>
                   </li>
