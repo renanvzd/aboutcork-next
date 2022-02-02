@@ -5,10 +5,12 @@
   background-image: url(../../../public/images/flagIreland.png);
   background-size: contain;
   opacity: 0.9;
-  
+
+  @media(max-width: 600px) {
+    width: 100%;
+  }
 
  > div {
-   
    display: flex;
    justify-content: space-between;
 
@@ -18,11 +20,28 @@
     justify-content: center;
     margin-top: 8rem;
     width: 33%;
-    
+
+    @media(max-width: 600px) {
+      padding: 0rem 0rem;
+    }
+
+    .title {
+      height: 100px;
+
+      @media(max-width: 600px) {
+        height: 50px;
+      }
+    }
+
     h2 {
-      padding-bottom: 1.5rem;
+      margin-bottom: 3.5rem;
       color: black;
-      font: 3rem;
+      font-size: 2.5rem;
+     
+      @media(max-width: 600px) {
+        font-size: 0.95rem;
+        margin-bottom: 3.5rem;
+      }
     }
 
     .profileDetails {
@@ -30,11 +49,16 @@
       height: 160px;
       color: black;
       display: flex;
-
       align-items: center;
       padding: 1rem 0.2rem;
       margin-top: 1.5rem;
       border: 1px solid black;
+      @media(max-width: 600px) {
+        padding: 1rem 0rem;
+        flex-direction: column;
+        margin: 1.5rem 0.25rem;
+        height: 180px;
+      }
 
       > img {
         width: 110px;
@@ -42,6 +66,12 @@
         margin: 0rem 1rem 0 1rem;
         border: 1px solid black;
         border-radius: 50%;
+
+        @media(max-width: 600px) {
+          width: 80px;
+          height: 80px;
+          margin: 0rem 0rem 0 0rem;
+        }
       }
 
       > div {
@@ -50,8 +80,6 @@
         justify-content: center;
         width: 100%;
         align-content: center;
-        
-        
 
         > p {
           text-align: center;
@@ -59,6 +87,11 @@
           padding-right: 10px;
           font-size: 1.25rem;
           font-weight: 600;
+
+          @media(max-width: 600px) {
+            padding-right: 2px;
+            font-size: 0.8rem;
+          }
         }
 
         .socialMedia {
@@ -66,13 +99,20 @@
           padding-top: 30px;
           justify-content: center;
 
+          @media(max-width: 600px) {
+            padding-top: 15px;
+          }
+
           > div {
             display: flex;
-            // padding-right: 5px;
-
+            
             .mediaImg {
-              
               padding-right: 1.1rem;
+
+              @media(max-width: 600px) {
+                padding-right: 0.5rem;
+                width: 25px;
+              }
             }
           }
         }

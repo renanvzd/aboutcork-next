@@ -13,7 +13,9 @@ export default function Recomendacoes() {
         <div>
 
           <div className={styles.profile}>
-            <h2>Perfis Instagram/Youtube</h2>
+            <div className={styles.title}>
+              <h2>Instagram e Youtube</h2>
+            </div>
 
             <div className={styles.profileDetails}>
               <img src="/images/casalemcork.jpg" alt="ireland" />
@@ -81,8 +83,9 @@ export default function Recomendacoes() {
           </div>
 
           <div className={styles.profile}>
-            <h2>Sites de Interesse Público</h2>
-
+            <div className={styles.title}>
+              <h2>Interesse Público</h2>
+            </div>
             <div className={styles.profileDetails}>
               <img src="/images/casalemcork.jpg" alt="ireland" />
               <div>
@@ -100,7 +103,9 @@ export default function Recomendacoes() {
           </div>
 
           <div className={styles.profile}>
-            <h2>Comunidade Brasileira</h2>
+            <div className={styles.title}>
+              <h2>Comunidade Brasileira</h2>
+            </div>
             <div className={styles.profileDetails}>
               <img src="/images/casalemcork.jpg" alt="ireland" />
               <div>
