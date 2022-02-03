@@ -53,9 +53,14 @@ export default function Recomendacoes() {
             </div>
 
             <div className={styles.profileDetails}>
-              <img src="/images/casalemcork.jpg" alt="ireland" />
+              <img src="https://i.imgur.com/iNE9JAh.png" alt="Leap Card"
+                className={styles.businessImage}
+              />
               <div>
-                <p>Casal em Cork</p>
+                <p>Daft.ie</p>
+                <p className={styles.tema}>
+                  [Imobiliária]
+                </p>
                 <div className={styles.socialMedia}>
                   <div>
                     <a
@@ -100,13 +105,25 @@ export default function Recomendacoes() {
             </div>
 
             <div className={styles.profileDetails}>
-              <img src="/images/casalemcork.jpg" alt="ireland" />
+              <img src="/images/renan.jpg" alt="ireland" />
               <div>
                 <p>Renan Veronez Drechsler</p>
                 <div className={styles.socialMedia}>
+
                   <div>
                     <a
-                      href="https://www.facebook.com/pousadatramandai"
+                      href="https://www.linkedin.com/in/renan-veronez-drechsler-54a4801a3/"
+                      target="_blank"
+                      title="Visite nosso canal"
+                      rel="noreferrer"
+                    >
+                      <img src="/images/linkedin.svg" alt="Facebook" className={styles.mediaImg} />
+                    </a>
+                  </div>
+
+                  <div>
+                    <a
+                      href="https://www.facebook.com/renan.veronezdrechsler"
                       target="_blank"
                       title="Visite nosso facebook"
                       rel="noreferrer"
@@ -115,16 +132,6 @@ export default function Recomendacoes() {
                     </a>
                   </div>
 
-                  <div>
-                    <a
-                      href="https://www.youtube.com/channel/UCb8Jf1A0laXF7O-b6up1FJg"
-                      target="_blank"
-                      title="Visite nosso canal"
-                      rel="noreferrer"
-                    >
-                      <img src="/images/Youtube.svg" alt="Facebook" className={styles.mediaImg} />
-                    </a>
-                  </div>
                   <div>
                     <a
                       href="https://www.instagram.com/moradas_do_pe_grande_tramandai/"
