@@ -103,7 +103,7 @@ export default function Recomendacoes({ influencers, business, comunidade }: Hom
                   <div className={styles.businessData}>
                     <p className={styles.business}>{busi.data.name}</p>
                     <p className={styles.tema}>
-                      {busi.data.segment}
+                      ({busi.data.segment})
                     </p>
                   </div>
                 </div>
