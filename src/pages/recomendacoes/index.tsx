@@ -29,7 +29,7 @@ export default function Recomendacoes() {
                       title="Visite nosso canal"
                       rel="noreferrer"
                     >
-                      <img src="/images/YouTube.svg" alt="Facebook" className={styles.mediaImg} />
+                      <img src="/images/Youtube.svg" alt="Facebook" className={styles.mediaImg} />
                     </a>
                   </div>
                   <div>
@@ -75,7 +75,7 @@ export default function Recomendacoes() {
                       title="Visite nosso canal"
                       rel="noreferrer"
                     >
-                      <img src="/images/YouTube.svg" alt="Facebook" className={styles.mediaImg} />
+                      <img src="/images/Youtube.svg" alt="Facebook" className={styles.mediaImg} />
                     </a>
                   </div>
                   <div>
@@ -122,7 +122,7 @@ export default function Recomendacoes() {
                       title="Visite nosso canal"
                       rel="noreferrer"
                     >
-                      <img src="/images/YouTube.svg" alt="Facebook" className={styles.mediaImg} />
+                      <img src="/images/Youtube.svg" alt="Facebook" className={styles.mediaImg} />
                     </a>
                   </div>
                   <div>
