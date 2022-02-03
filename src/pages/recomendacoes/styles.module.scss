@@ -106,6 +106,34 @@
         border: 0;
       }
 
+      .businessData {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+
+        .business {
+          font-size: 1.5rem;
+          @media (min-width: 300px) and (max-width: 1200px){
+            padding-top: 2rem;
+            font-size: 1rem;
+          }
+        }
+
+        .tema {
+          color: rgb(21, 131, 39);
+          font-size: 1.2rem;
+          padding-top: 10px;
+          font-weight: 600;
+
+          @media (min-width: 300px) and (max-width: 1200px){
+            font-size: 0.75rem;
+            padding-top: 3px;
+          }
+        }
+      }
+
       > div {
         display: flex;
         flex-direction: column;
@@ -125,22 +153,11 @@
 
           @media(max-width: 600px) {
             padding: 10px 5px 0 5px;
-            font-size: 0.8rem;
-          }
-          @media (min-width: 600px) and (max-width: 1000px){
-            padding: 10px 5px 0 5px;
             font-size: 0.9rem;
           }
-        }
-        .tema {
-          color: rgb(21, 131, 39);
-          font-size: 1.05rem;
-          padding-top: 10px;
-          font-weight: 600;
-
-          @media (min-width: 300px) and (max-width: 1200px){
-            font-size: 0.75rem;
-            padding-top: 3px;
+          @media (min-width: 600px) and (max-width: 1000px){
+            padding: 20px 5px 0 5px;
+            font-size: 0.9rem;
           }
         }
 
