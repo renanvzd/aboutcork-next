@@ -118,7 +118,7 @@ export default function Recomendacoes({ influencers, business, comunidade }: Hom
 
             {comunidade.map((comunidad) => (
               <div key={comunidad.uid} className={styles.profileDetails}>
-                <img src={comunidad.data.logo} alt="ireland" />
+                <img src={comunidad.data.logo} alt={comunidad.data.name} />
                 <div>
                   <p>{comunidad.data.name}</p>
                   <div className={styles.socialMedia}>
