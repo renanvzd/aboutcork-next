@@ -1,7 +1,7 @@
 import { ActiveLink } from './ActiveLink';
+import Link from 'next/link'
 import { useState } from 'react'
 import styles from './styles.module.scss';
-import { FiLogOut } from 'react-icons/fi';
 
 
 
@@ -14,7 +14,9 @@ export function Header() {
         <div className={styles.headerContent}>
           <div className={styles.logoHeader}>
             <img className={styles.logo} src="/images/four-leaf.png" alt="Four Leaf" />
-            <h1>Cork</h1>
+            <Link href="/">
+              <h1>About Cork</h1>
+            </Link>
           </div>
 
           <div className={styles.logoWithLinks}>
