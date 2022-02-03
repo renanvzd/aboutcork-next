@@ -14,10 +14,19 @@ interface HomeProps {
       logo: string;
     }
   }[];
+  business: {
+    uid?: string;
+    data: {
+      name: string;
+      segment: string;
+      logo: string;
+      link: string;
+    }
+  }[];
 }
 
 
-export default function Recomendacoes({ influencers }: HomeProps) {
+export default function Recomendacoes({ influencers, business }: HomeProps) {
 
   return (
     <>
@@ -68,27 +77,28 @@ export default function Recomendacoes({ influencers }: HomeProps) {
             <div className={styles.title}>
               <h2>Interesse Público</h2>
             </div>
+            {business.map((busi) => (
+              <a
+                href={busi.data.link}
+                target="_blank"
+                title="Visite nosso Instagram"
+                rel="noreferrer"
+                key={busi.uid}
+              >
+                <div className={styles.profileDetails}>
 
-            <a
-              href='https://www.daft.ie/'
-              target="_blank"
-              title="Visite nosso Instagram"
-              rel="noreferrer"
-            >
-              <div className={styles.profileDetails}>
-
-                <img src="https://i.imgur.com/iNE9JAh.png" alt="Leap Card"
-                  className={styles.businessImage}
-                />
-                <div className={styles.businessData}>
-                  <p className={styles.business}>Daft.ie</p>
-                  <p className={styles.tema}>
-                    [Imobiliária]
-                  </p>
+                  <img src={busi.data.logo} alt={busi.data.name}
+                    className={styles.businessImage}
+                  />
+                  <div className={styles.businessData}>
+                    <p className={styles.business}>{busi.data.name}</p>
+                    <p className={styles.tema}>
+                      {busi.data.segment}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </a>
-
+              </a>
+            ))}
           </div>
 
           <div className={styles.profile}>
@@ -165,9 +175,26 @@ export const getStaticProps: GetStaticProps = async () => {
     };
   });
 
+  const businessResponse = await prismic.query(
+    [Prismic.predicates.at('document.type', 'interessepublico')],
+  );
+
+  const business = businessResponse.results.map(interessepublico => {
+    return {
+      uid: interessepublico.uid,
+      data: {
+        name: interessepublico.data.name,
+        segment: interessepublico.data.segment,
+        logo: interessepublico.data.logo.url,
+        link: interessepublico.data.link,
+      },
+    };
+  });
+
   return {
     props: {
       influencers,
+      business,
     },
   };
 };
