@@ -69,7 +69,7 @@ export default function Recomendacoes({ influencers, business, comunidade }: Hom
             </p>
           </div>
         </div>
-        <div data-aos="fade-up">
+        <div>
           <SocialMedia
             influencers={influencers}
             business={business}
