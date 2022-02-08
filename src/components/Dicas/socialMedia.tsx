@@ -34,12 +34,12 @@ interface HomeProps {
 export default function SocialMedia({ influencers, business, comunidade }: HomeProps) {
   return (
     <>
-      <div className={styles.profile}>
+      <div className={styles.profile} >
         <div className={styles.title}>
           <h2>Instagram e Youtube</h2>
         </div>
         {influencers.map((influencer) => (
-          <div key={influencer.uid} className={styles.profileDetails} data-aos="fade-up">
+          <div key={influencer.uid} className={styles.profileDetails}>
             <div className={styles.logo}>
               <img src={influencer.data.logo} alt="ireland" />
             </div>
@@ -87,7 +87,7 @@ export default function SocialMedia({ influencers, business, comunidade }: HomeP
             rel="noreferrer"
             key={busi.uid}
           >
-            <div className={styles.profileDetails} data-aos="fade-up">
+            <div className={styles.profileDetails} >
               <div className={styles.logo}>
                 <img src={busi.data.logo} alt={busi.data.name}
                   className={styles.businessImage}
@@ -110,7 +110,7 @@ export default function SocialMedia({ influencers, business, comunidade }: HomeP
         </div>
 
         {comunidade.map((comunidad) => (
-          <div key={comunidad.uid} className={styles.profileDetails} data-aos="fade-up">
+          <div key={comunidad.uid} className={styles.profileDetails}>
             <div className={styles.logo}>
               <img src={comunidad.data.logo} alt={comunidad.data.name} />
             </div>
