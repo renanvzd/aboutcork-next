@@ -3,6 +3,7 @@ import Prismic from '@prismicio/client';
 import { GetStaticProps } from 'next';
 import { getPrismicClient } from '../../services/prismic';
 import styles from './styles.module.scss';
+import SocialMedia from '../../components/Dicas/socialMedia';
 
 interface HomeProps {
   influencers: {
@@ -44,140 +45,37 @@ export default function Recomendacoes({ influencers, business, comunidade }: Hom
         <title>Recomendações | Cork</title>
       </Head>
 
-      <main className={styles.container}>
-        <div>
+      <div className={styles.container}>
 
-          <div className={styles.profile}>
-            <div className={styles.title}>
-              <h2>Instagram e Youtube</h2>
-            </div>
-            {influencers.map((influencer) => (
-              <div key={influencer.uid} className={styles.profileDetails}>
-                <div className={styles.logo}>
-                  <img src={influencer.data.logo} alt="ireland" />
-                </div>
-                <div>
-                  <p>{influencer.data.name}</p>
-                  <div className={styles.socialMedia}>
-                    {influencer.data.youtube ?
-                      (<div>
-                        <a
-                          href={influencer.data.youtube}
-                          target="_blank"
-                          title="Visite nosso Canal"
-                          rel="noreferrer"
-                        >
-                          <img src="/images/Youtube.svg" alt="Facebook" className={styles.mediaImg} />
-                        </a>
-                      </div>)
-                      : ''
-                    }
-                    <div>
-                      <a
-                        href={influencer.data.instagram}
-                        target="_blank"
-                        title="Visite nosso Instagram"
-                        rel="noreferrer"
-                      >
-                        <img src="/images/Instagram_new.svg" alt="Facebook" className={styles.mediaImg} />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
+        <div className={styles.introduction}>
+          <p>Aqui você encontra um compilado de perfis e links úteis que poderão lhe auxiliar na busca por mais conhecimento e informações sobre Cork. Praticidade, simplicidade e objetividade!</p>
+          <div className={styles.explain}>
+            <p>
+              <b>Instagram e Youtube: </b>
+              Nessa coluna são apresentados os perfis e canais de pessoas que mudaram para Irlanda e compartilham sua experiência e aprendizados.
+            </p>
           </div>
-
-          <div className={styles.profile}>
-            <div className={styles.title}>
-              <h2>Interesse Público</h2>
-            </div>
-            {business.map((busi) => (
-              <a
-                href={busi.data.link}
-                target="_blank"
-                title="Visite nosso Instagram"
-                rel="noreferrer"
-                key={busi.uid}
-              >
-                <div className={styles.profileDetails}>
-                  <div className={styles.logo}>
-                    <img src={busi.data.logo} alt={busi.data.name}
-                      className={styles.businessImage}
-                    />
-                  </div>
-                  <div className={styles.businessData}>
-                    <p className={styles.business}>{busi.data.name}</p>
-                    <p className={styles.tema}>
-                      ({busi.data.segment})
-                    </p>
-                  </div>
-                </div>
-              </a>
-            ))}
+          <div className={styles.explain}>
+            <p>
+              <b>Interesses Gerais: </b>
+              Nessa coluna são disponibilizados diversos links de utilidade geral (imobiliárias, bancos, transporte, órgãos governamentais) que você deve conhecer para seguir com sua nova vida na Irlanda.
+            </p>
           </div>
-
-          <div className={styles.profile}>
-            <div className={styles.title}>
-              <h2>Comunidade Brasileira</h2>
-            </div>
-
-            {comunidade.map((comunidad) => (
-              <div key={comunidad.uid} className={styles.profileDetails}>
-                <div className={styles.logo}>
-                  <img src={comunidad.data.logo} alt={comunidad.data.name} />
-                </div>
-                <div>
-                  <p>{comunidad.data.name}</p>
-                  <div className={styles.socialMedia}>
-                    {comunidad.data.linkedin ?
-                      (<div>
-                        <a
-                          href={comunidad.data.linkedin}
-                          target="_blank"
-                          title="Conectar no Linkedin"
-                          rel="noreferrer"
-                        >
-                          <img src="/images/linkedin.svg" alt="Linkedin" className={styles.mediaImg} />
-                        </a>
-                      </div>)
-                      : null
-                    }
-
-                    {comunidad.data.facebook ?
-                      (<div>
-                        <a
-                          href={comunidad.data.facebook}
-                          target="_blank"
-                          title="Adicione no Facebook"
-                          rel="noreferrer"
-                        >
-                          <img src="/images/Facebook.svg" alt="Facebook" className={styles.mediaImg} />
-                        </a>
-                      </div>)
-                      : null
-                    }
-
-                    {comunidad.data.instagram ?
-                      (<div>
-                        <a
-                          href={comunidad.data.instagram}
-                          target="_blank"
-                          title="Adicione no Instagram"
-                          rel="noreferrer"
-                        >
-                          <img src="/images/Instagram_new.svg" alt="Instagram" className={styles.mediaImg} />
-                        </a>
-                      </div>)
-                      : null
-                    }
-                  </div>
-                </div>
-              </div>
-            ))}
+          <div className={styles.explain}>
+            <p>
+              <b>Comunidade Brasileira: </b>
+              Conexão é tudo! Queremos também disponibilizar esse espaço para que nós brasileiros possamos saber quem está em Cork e como podemos nos conectar. Mas lembre-se, ajude para ser ajudado! O espaço é disponibilizado para quem compartilhar alguma experiência que teve, para que outros brasileiros possam aprender com você!
+            </p>
           </div>
         </div>
-      </main>
+        <div>
+          <SocialMedia
+            influencers={influencers}
+            business={business}
+            comunidade={comunidade}
+          />
+        </div>
+      </div>
     </>
   )
 }
