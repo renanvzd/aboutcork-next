@@ -48,7 +48,8 @@ export default function Recomendacoes({ influencers, business, comunidade }: Hom
       <div className={styles.container}>
 
         <div className={styles.introduction}>
-          <p>Aqui você encontra um compilado de perfis e links úteis que poderão lhe auxiliar na busca por mais conhecimento e informações sobre Cork. Praticidade, simplicidade e objetividade!</p>
+          <p>Aqui você encontra um compilado de perfis e links úteis que poderão lhe auxiliar na busca por mais conhecimento e informações sobre Cork.</p>
+          <p> Praticidade, simplicidade e objetividade!</p>
           <div className={styles.explain}>
             <p>
               <b>Instagram e Youtube: </b>

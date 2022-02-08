@@ -26,6 +26,7 @@
       font-size: 2rem;
       text-align: justify;
       line-height: 45px;
+      padding-bottom: 0.5rem;
 
       @media(max-width: 600px) {
         font-size: 1rem;
@@ -35,10 +36,10 @@
 
     .explain {
       display: flex;
-      padding: 2rem 5rem 0 2rem;
+      padding: 1.5rem 5rem 0 2rem;
 
       @media(max-width: 600px) {
-        padding: 2rem 1rem 0 1rem;
+        padding: 1.5rem 1rem 0 1rem;
       }
 
       > p {
