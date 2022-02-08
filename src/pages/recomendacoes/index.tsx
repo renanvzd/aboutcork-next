@@ -9,7 +9,7 @@ interface HomeProps {
     uid?: string;
     data: {
       name: string;
-      youtube: string;
+      youtube?: string;
       instagram?: string;
       logo: string;
     }
@@ -59,16 +59,19 @@ export default function Recomendacoes({ influencers, business, comunidade }: Hom
                 <div>
                   <p>{influencer.data.name}</p>
                   <div className={styles.socialMedia}>
-                    <div>
-                      <a
-                        href={influencer.data.youtube}
-                        target="_blank"
-                        title="Visite nosso Canal"
-                        rel="noreferrer"
-                      >
-                        <img src="/images/Youtube.svg" alt="Facebook" className={styles.mediaImg} />
-                      </a>
-                    </div>
+                    {influencer.data.youtube ?
+                      (<div>
+                        <a
+                          href={influencer.data.youtube}
+                          target="_blank"
+                          title="Visite nosso Canal"
+                          rel="noreferrer"
+                        >
+                          <img src="/images/Youtube.svg" alt="Facebook" className={styles.mediaImg} />
+                        </a>
+                      </div>)
+                      : ''
+                    }
                     <div>
                       <a
                         href={influencer.data.instagram}
@@ -127,39 +130,47 @@ export default function Recomendacoes({ influencers, business, comunidade }: Hom
                 <div>
                   <p>{comunidad.data.name}</p>
                   <div className={styles.socialMedia}>
+                    {comunidad.data.linkedin ?
+                      (<div>
+                        <a
+                          href={comunidad.data.linkedin}
+                          target="_blank"
+                          title="Conectar no Linkedin"
+                          rel="noreferrer"
+                        >
+                          <img src="/images/linkedin.svg" alt="Linkedin" className={styles.mediaImg} />
+                        </a>
+                      </div>)
+                      : null
+                    }
 
-                    <div>
-                      <a
-                        href={comunidad.data.linkedin}
-                        target="_blank"
-                        title="Conectar no Linkedin"
-                        rel="noreferrer"
-                      >
-                        <img src="/images/linkedin.svg" alt="Linkedin" className={styles.mediaImg} />
-                      </a>
-                    </div>
+                    {comunidad.data.facebook ?
+                      (<div>
+                        <a
+                          href={comunidad.data.facebook}
+                          target="_blank"
+                          title="Adicione no Facebook"
+                          rel="noreferrer"
+                        >
+                          <img src="/images/Facebook.svg" alt="Facebook" className={styles.mediaImg} />
+                        </a>
+                      </div>)
+                      : null
+                    }
 
-                    <div>
-                      <a
-                        href={comunidad.data.facebook}
-                        target="_blank"
-                        title="Adicione no Facebook"
-                        rel="noreferrer"
-                      >
-                        <img src="/images/Facebook.svg" alt="Facebook" className={styles.mediaImg} />
-                      </a>
-                    </div>
-
-                    <div>
-                      <a
-                        href={comunidad.data.instagram}
-                        target="_blank"
-                        title="Adicione no Instagram"
-                        rel="noreferrer"
-                      >
-                        <img src="/images/Instagram_new.svg" alt="Instagram" className={styles.mediaImg} />
-                      </a>
-                    </div>
+                    {comunidad.data.instagram ?
+                      (<div>
+                        <a
+                          href={comunidad.data.instagram}
+                          target="_blank"
+                          title="Adicione no Instagram"
+                          rel="noreferrer"
+                        >
+                          <img src="/images/Instagram_new.svg" alt="Instagram" className={styles.mediaImg} />
+                        </a>
+                      </div>)
+                      : null
+                    }
                   </div>
                 </div>
               </div>
