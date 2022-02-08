@@ -50,7 +50,6 @@
     }
 
     .profileDetails {
-      
       background: rgba(255, 255, 255, 0.4);
       backdrop-filter: blur(200px);
       -webkit-backdrop-filter: blur(200px);
@@ -77,31 +76,30 @@
         height: 230px;
       }
 
-      > img {
-        width: 110px;
-        height: 110px;
-        margin: 0rem 1rem 0 1rem;
-        border: 0px solid black;
-        border-radius: 50%;
-        object-fit: cover;
+      
+      .logo {
+        display: flex;
+        align-items: center;
+        
+        > img {
+          width: 110px;
+          height: 110px;
+          border: 0px solid black;
+          border-radius: 50%;
+          object-fit: cover;
 
-        @media (min-width: 300px) and (max-width: 350px) {
-          width: 80px;
-          height: 80px;
-          margin: 0rem 0rem 0 0rem;
-        }
-        @media (min-width: 351px) and (max-width: 600px) {
-          width: 80px;
-          height: 80px;
-          margin: 0rem 0rem 0 0rem;
-        }
-        @media (min-width: 601px) and (max-width: 1000px){
-          width: 100px;
-          height: 100px;
-          margin: 0rem 0rem 0 0rem;
+          @media (min-width: 300px) and (max-width: 600px) {
+            width: 80px;
+            height: 80px;
+            margin: 0rem 0rem 0 0rem;
+          }
+          @media (min-width: 601px) and (max-width: 1000px){
+            width: 100px;
+            height: 100px;
+            margin: 0rem 0rem 0 0rem;
+          }
         }
       }
-
       .businessImage {
         border-radius: 0%;
         border: 0;

@@ -53,7 +53,9 @@ export default function Recomendacoes({ influencers, business, comunidade }: Hom
             </div>
             {influencers.map((influencer) => (
               <div key={influencer.uid} className={styles.profileDetails}>
-                <img src={influencer.data.logo} alt="ireland" />
+                <div className={styles.logo}>
+                  <img src={influencer.data.logo} alt="ireland" />
+                </div>
                 <div>
                   <p>{influencer.data.name}</p>
                   <div className={styles.socialMedia}>
@@ -96,10 +98,11 @@ export default function Recomendacoes({ influencers, business, comunidade }: Hom
                 key={busi.uid}
               >
                 <div className={styles.profileDetails}>
-
-                  <img src={busi.data.logo} alt={busi.data.name}
-                    className={styles.businessImage}
-                  />
+                  <div className={styles.logo}>
+                    <img src={busi.data.logo} alt={busi.data.name}
+                      className={styles.businessImage}
+                    />
+                  </div>
                   <div className={styles.businessData}>
                     <p className={styles.business}>{busi.data.name}</p>
                     <p className={styles.tema}>
@@ -118,7 +121,9 @@ export default function Recomendacoes({ influencers, business, comunidade }: Hom
 
             {comunidade.map((comunidad) => (
               <div key={comunidad.uid} className={styles.profileDetails}>
-                <img src={comunidad.data.logo} alt={comunidad.data.name} />
+                <div className={styles.logo}>
+                  <img src={comunidad.data.logo} alt={comunidad.data.name} />
+                </div>
                 <div>
                   <p>{comunidad.data.name}</p>
                   <div className={styles.socialMedia}>
