@@ -1,11 +1,11 @@
-import styles from "./styles.module.scss";
-// import MyParticles from '../Particles'
-import Particles from "react-particles-js";
 import { useEffect } from "react";
+import styles from "./styles.module.scss";
+import Particles from "react-particles-js";
+// import MyParticles from '../Particles'
 
 export function HomeFirstSection() {
   useEffect(() => {
-    Particles;
+    Particles
   }, [])
   return (
     <>
