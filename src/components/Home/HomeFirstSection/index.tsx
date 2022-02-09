@@ -1,8 +1,12 @@
 import styles from "./styles.module.scss";
 // import MyParticles from '../Particles'
 import Particles from "react-particles-js";
+import { useEffect } from "react";
 
 export function HomeFirstSection() {
+  useEffect(() => {
+    Particles;
+  }, [])
   return (
     <>
       <div data-aos="fade-up" >
