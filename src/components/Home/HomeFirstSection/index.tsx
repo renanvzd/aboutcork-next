@@ -4,11 +4,11 @@ import MyParticles from '../Particles'
 export function HomeFirstSection() {
   return (
     <>
-      <MyParticles />
       <div data-aos="fade-up" >
+        <MyParticles></MyParticles>
         <div className={styles.containerHome}>
           <main className={styles.contentContainer}>
-            <MyParticles />
+            <MyParticles></MyParticles>
             <div className={styles.left}>
               <span>👏🏼 Hey, welcome to</span>
               <h1>About <span>Cork</span></h1>
@@ -16,7 +16,7 @@ export function HomeFirstSection() {
                 <span>...for brazilians 🇧🇷</span>
               </p>
             </div>
-            <MyParticles />
+            <MyParticles></MyParticles>
             <div className={styles.right}>
               <img src="/images/irish.png" alt="ireland" />
             </div>
