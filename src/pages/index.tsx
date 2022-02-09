@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 import { HomeFirstSection } from '../components/Home/HomeFirstSection';
 import { HomeSecSection } from '../components/Home/HomeSecSection';
 import { HomeThirdSection } from '../components/Home/HomeThirdSection';
-// import styles from './home.module.scss';
+import { HomeFourthSection } from '../components/Home/HomeFourthSection';
 
 export default function Home() {
   useEffect(() => {
@@ -22,7 +22,10 @@ export default function Home() {
 
       <HomeSecSection />
 
+      <HomeFourthSection />
+
       <HomeThirdSection />
+
 
     </>
   )
