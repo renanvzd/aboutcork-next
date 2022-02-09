@@ -50,6 +50,7 @@ export const ContainerImage = styled.section`
 .image {
   min-height: 100vh;
   position: relative;
+  object-fit: contain;
 }
 
 .image .content {
@@ -92,17 +93,18 @@ h3 {
 export const ParallaxContainer = styled.div`
 .image {
   min-height: 30rem;
-  width: 100%;
+  max-width: 100%;
   position: relative;
 }
 
 .image .content {
   position: absolute;
+  object-fit: contain;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
+  /* justify-content: center;
+  align-items: center; */
+  /* width: 100%;
+  height: 100vh; */
 }
 
 .content span.img-txt {
