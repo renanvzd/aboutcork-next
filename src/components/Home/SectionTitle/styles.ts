@@ -10,7 +10,7 @@ export const Container = styled.div`
   h1 {
     color: white;
     font-size: 4.5rem;
-    font-family: 'Short Stack';
+    font-family: 'Roboto Mono', monospace;
   }
 
   h2 {
