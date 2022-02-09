@@ -20,11 +20,10 @@
     "react-gesture-responder": "^2.1.0",
     "react-icons": "^4.3.1",
     "react-modal": "^3.14.3",
-    "react-particles-js": "^3.6.0",
+    "react-tsparticles": "^1.40.2",
     "remove": "^0.1.5",
     "sass": "^1.42.1",
-    "styled-components": "^5.3.3",
-    "tsparticles": "^1.37.3"
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
     "@types/node": "^16.10.3",

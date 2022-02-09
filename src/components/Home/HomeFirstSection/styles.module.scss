@@ -3,6 +3,8 @@
   z-index: 0;
   
   .particles {
+    width: 99vw;
+    height: 100vh;
     z-index: 1;
     position: absolute;
   }
@@ -96,6 +98,7 @@
 
     .particles {
       z-index: 1;
+      width: 100vw;
       height: 100vh;
       position: absolute;
     }    

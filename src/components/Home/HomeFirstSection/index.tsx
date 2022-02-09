@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import styles from "./styles.module.scss";
-import Particles from "react-particles-js";
+import Particles from "react-tsparticles";
 // import MyParticles from '../Particles'
 
 export function HomeFirstSection() {
