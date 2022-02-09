@@ -1,34 +1,35 @@
 import Particles from "react-tsparticles";
 import styles from './styles.module.scss';
 
-export default function MyParticles({ children }) {
+export default function MyParticles() {
   return (
     <Particles
       className={styles.particles}
       params={{
         "particles": {
           "number": {
-            "value": 150,
+            "value": 250,
             "density": {
               "enable": true,
-              "value_area": 1500
+              "value_area": 2500
             }
           },
           "line_linked": {
             "enable": false,
           },
           "move": {
-            // "direction": "down",
-            "speed": 0.1
+            "enable": true,
+            "direction": "none",
+            "speed": 0.25,
           },
           "size": {
-            "value": 2
+            "value": 1.5
           },
           "opacity": {
             "anim": {
               "enable": true,
-              "speed": 1.5,
-              "opacity_min": 0.05
+              "speed": 5,
+              "opacity_min": 0.1
             }
           }
         },
@@ -45,10 +46,8 @@ export default function MyParticles({ children }) {
             }
           }
         },
-        "retina_detect": true
+        "retina_detect": false
       }}>
-      {children}
-
     </Particles>
   );
 }
