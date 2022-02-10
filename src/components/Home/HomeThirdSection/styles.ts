@@ -13,7 +13,7 @@ padding: 0 1rem;
   max-width: 50rem;
 }
 @media(max-width:700px) {
-  margin: 6rem auto;
+  margin: 0rem auto 5rem;
   padding: 0 2rem;
 }
 `

@@ -24,41 +24,43 @@ export const ContainerSquad = styled.section`
   > section {
     width: 100%;
     margin-top: 5rem;
-    display: flex;
-    gap: 1.5rem;
+    /* display: none; */
 
+/* 
     padding-bottom: 6rem;
-    border-bottom: 3px solid #0EE7B7;
+    border-bottom: 3px solid #0EE7B7; */
 
     @media (max-width: 1000px) {
       gap: 1rem;
     }
 
     @media (max-width: 700px) {
-      flex-direction: column;
-      margin-top: 4rem;
-      padding-bottom: 5rem;
-      gap: 2rem;
+      flex-direction: row;
+      margin-top: 2rem;
+      padding-bottom: 1rem;
+      gap: 0rem;
     }
   }
 `;
 
 
 export const ParallaxContainer = styled.div`
-  padding-top: 2rem;
+  margin-top: -20px;
 /* background-attachment: fixed; */
   /* background-repeat: no-repeat; */
   /* background-size: cover; */
 > div {
   
-  
+  /* padding-bottom: -20px; */
   .image {
       height: 800px;
       max-width: 100%;
       background-position: top;
       @media (max-width: 600px) {
-        height: 400px;
+        height: 350px;
         max-width: 100%;
+        margin-bottom: 0px;
+        display: absolute;
       }
   }
 }

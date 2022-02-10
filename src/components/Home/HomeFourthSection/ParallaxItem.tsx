@@ -14,13 +14,13 @@ export default function ParallaxItem({ backgroundImage }: ExperienciaProps) {
           className='image'
           blur={0}
           bgImage={backgroundImage}
-          strength={-800}
+          strength={-600}
           bgImageStyle={
             {
               // height: '80vh',
               maxWidth: '100%',
-              opacity: '1',
-              objectFit: 'cover',
+              opacity: '0.8',
+              objectFit: 'contain',
               backgroundPosition: 'top',
               // backgroundRepeat: 'no-repeat'
             }
