@@ -14,7 +14,7 @@ export default function ParallaxItem({ backgroundImage }: ExperienciaProps) {
           className='image'
           blur={0}
           bgImage={backgroundImage}
-          strength={-800}
+          strength={-600}
           bgImageStyle={
             {
               // height: '80vh',

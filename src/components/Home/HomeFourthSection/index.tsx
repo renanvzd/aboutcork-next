@@ -10,7 +10,7 @@ export function HomeFourthSection() {
         <SectionTitle title="We love it!" />
         <section>
           <ParallaxItem
-            backgroundImage="/images/Corkc.jpeg"
+            backgroundImage="/images/Cork.jpg"
           // description='Cheers'
           />
         </section>

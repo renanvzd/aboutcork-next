@@ -26,9 +26,9 @@ export const ContainerSquad = styled.section`
     margin-top: 5rem;
     /* display: none; */
 
-
+/* 
     padding-bottom: 6rem;
-    border-bottom: 3px solid #0EE7B7;
+    border-bottom: 3px solid #0EE7B7; */
 
     @media (max-width: 1000px) {
       gap: 1rem;
@@ -36,7 +36,7 @@ export const ContainerSquad = styled.section`
 
     @media (max-width: 700px) {
       flex-direction: row;
-      margin-top: -10rem;
+      margin-top: 2rem;
       padding-bottom: 1rem;
       gap: 0rem;
     }
@@ -45,7 +45,7 @@ export const ContainerSquad = styled.section`
 
 
 export const ParallaxContainer = styled.div`
-  margin-top: -50px;
+  margin-top: -20px;
 /* background-attachment: fixed; */
   /* background-repeat: no-repeat; */
   /* background-size: cover; */
