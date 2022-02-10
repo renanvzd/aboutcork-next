@@ -44,76 +44,22 @@ export const ContainerSquad = styled.section`
 `;
 
 
-
-export const ContainerImage = styled.section`
-
-.image {
-  min-height: 100vh;
-  position: relative;
-  object-fit: contain;
-}
-
-.image .content {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-}
-
-.content span.img-txt {
-  background-color: #333;
-  text-transform: uppercase;
-  color: #fff;
-  padding: 1rem;
-  font-size: 1.5rem;
-  letter-spacing: 10px;
-}
-
-
-
-h3 {
-  letter-spacing: 6px;
-  text-transform: uppercase;
-  font: 1.3rem;
-  text-align: center;
-}
-
-.text-box {
-  text-align: center;
-  padding: 3rem 1rem;
-  text-align: justify;
-  color: white;
-}
-
-
-`
-
 export const ParallaxContainer = styled.div`
-.image {
-  min-height: 30rem;
-  max-width: 100%;
-  position: relative;
+  padding-top: 2rem;
+/* background-attachment: fixed; */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+> div {
+  
+  
+  .image {
+      height: 800px;
+      max-width: 100%;
+      background-position: top;
+      @media (max-width: 600px) {
+        height: 400px;
+        max-width: 100%;
+      }
+  }
 }
-
-.image .content {
-  position: absolute;
-  object-fit: contain;
-  display: flex;
-  /* justify-content: center;
-  align-items: center; */
-  /* width: 100%;
-  height: 100vh; */
-}
-
-.content span.img-txt {
-  background-color: #333;
-  text-transform: uppercase;
-  color: #fff;
-  padding: 1rem;
-  font-size: 1rem;
-  letter-spacing: 10px;
-}
-
 `

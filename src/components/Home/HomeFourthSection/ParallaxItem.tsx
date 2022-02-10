@@ -9,17 +9,26 @@ interface ExperienciaProps {
 export default function ParallaxItem({ backgroundImage }: ExperienciaProps) {
   return (
     <ParallaxContainer>
-      <Parallax
-        className='image'
-        blur={0}
-        bgImage={backgroundImage}
-        strength={-800}
-        bgImageStyle={{ minHeight: "100vh" }}
-      >
-        {/* <div className='content'>
-          <span className="img-txt">{description}</span>
-        </div> */}
-      </Parallax>
-    </ParallaxContainer>
+      <div>
+        <Parallax
+          className='image'
+          blur={0}
+          bgImage={backgroundImage}
+          strength={-800}
+          bgImageStyle={
+            {
+              // height: '80vh',
+              maxWidth: '100%',
+              opacity: '1',
+              objectFit: 'cover',
+              backgroundPosition: 'top',
+              // backgroundRepeat: 'no-repeat'
+            }
+          }
+        >
+        </Parallax>
+      </div>
+
+    </ParallaxContainer >
   );
 }
