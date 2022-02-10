@@ -19,8 +19,8 @@ export default function ParallaxItem({ backgroundImage }: ExperienciaProps) {
             {
               // height: '80vh',
               maxWidth: '100%',
-              opacity: '1',
-              objectFit: 'cover',
+              opacity: '0.8',
+              objectFit: 'contain',
               backgroundPosition: 'top',
               // backgroundRepeat: 'no-repeat'
             }

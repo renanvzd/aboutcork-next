@@ -8,11 +8,12 @@ export function HomeFourthSection() {
     <Container>
       <ContainerSquad>
         <SectionTitle title="We love it!" />
-        <ParallaxItem
-          backgroundImage="/images/Cork.jpg"
-        // description='Cheers'
-        />
-
+        <section>
+          <ParallaxItem
+            backgroundImage="/images/Corkc.jpeg"
+          // description='Cheers'
+          />
+        </section>
       </ContainerSquad>
     </Container>
   );
