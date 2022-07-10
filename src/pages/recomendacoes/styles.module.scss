@@ -1,10 +1,7 @@
-
-
-
 .container {
   // max-width: 1520px;
   margin: 0 auto;
-  background: linear-gradient(90deg, rgba(19,236,100,1) 0%, rgba(239,255,245,1) 35%, rgba(238,238,238,1) 50%, rgba(255,235,214,1) 65%, rgba(255,130,0,1) 100%);
+  background: linear-gradient(90deg, rgba(19, 236, 100, 1) 0%, rgba(239, 255, 245, 1) 35%, rgba(238, 238, 238, 1) 50%, rgba(255, 235, 214, 1) 65%, rgba(255, 130, 0, 1) 100%);
   opacity: 0.95;
 
   @media(max-width: 600px) {
@@ -21,7 +18,7 @@
       padding: 8rem 2rem 0 2rem;
     }
 
-    > p {
+    >p {
       color: black;
       font-size: 2rem;
       text-align: justify;
@@ -42,7 +39,7 @@
         padding: 1.5rem 1rem 0 1rem;
       }
 
-      > p {
+      >p {
         text-align: justify;
         color: black;
         font-size: 1.5rem;
@@ -56,7 +53,7 @@
     }
   }
 
-  > div {
+  >div {
     display: flex;
     justify-content: space-between;
   }
